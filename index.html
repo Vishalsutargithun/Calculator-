@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <input type="text" id="display" disabled>
+    <div id="s">
+      <hr>
+    </div>
+    <div class="only">
+
+
+      <div class="first">
+        <button type="submit" class="i" onclick="c()" id="c">C</button>
+        <button class="i" type="submit" onclick="append('(','(')">(</button>
+        <button class="i" type="submit" onclick="append(')',')')">)</button>
+        <button class="ac" type="submit" onclick="append('÷','/')">÷</button>
+      </div>
+      <div class="second">
+        <button class="btn" type="submit" onclick="append('7','7')">7</button>
+        <button class="btn" type="submit" onclick="append('8','8')">8</button>
+        <button class="btn" type="submit" onclick="append('9','9')">9</button>
+        <button class="ac" type="submit" onclick="append('×','*')">×</button>
+      </div>
+      <div class="third">
+        <button class="btn" type="submit" onclick="append('4','4')">4</button>
+        <button class="btn" type="submit" onclick="append('5','5')">5</button>
+        <button class="btn" type="submit" onclick="append('6','6')">6</button>
+        <button class="ac" type="submit" onclick="append('-','-')">-</button>
+      </div>
+      <div class="fourth">
+        <button class="btn" type="submit" onclick="append('1','1')">1</button>
+        <button class="btn" type="submit" onclick="append('2','2')">2</button>
+        <button class="btn" type="submit" onclick="append('3','3')">3</button>
+        <button class="ac" type="submit" onclick="append('+','+')">+</button>
+      </div>
+      <div class="fifth">
+        <button class="vi" type="submit" onclick="append('0','0')">0</button>
+        <button class="vi" type="submit" onclick="append('.','.')">.</button>
+        <button onclick="append('cos(','Math.cos('  )" class="cos vi">cos</button>
+        <button class="btn" type="submit" onclick="p()" id="ss">%</button>
+        <button class="vi" type="submit" onclick="e()" id="e">=</button>
+      </div>
+      <div class="sixth">
+        <button onclick="append('√×(','Math.sqrt(  ')" class="btn">√</button>
+        <button onclick="square()" class="btn">x²</button>
+        <button onclick="append('tan(','Math.tan(')" class="btn">tan</button>
+
+        <button onclick="append('sin(','Math.sin(')" class="btn">sin</button>
+      </div>
+    </div>
+  </div>
+  <button class="done" onclick="deleteOne()">⌫</button>
+  <div id="history" class="dn">
+  </div>
+  <button type="submit" id="clearhistory" onclick="clearhistory()">clearhistory</button>
+  <button id="historybtn" onclick="showh()">history</button>
+  <p id="answer"></p>
+  <script src="main.js">
+    main.js
+  </script>
+</body>
+
+</html>
